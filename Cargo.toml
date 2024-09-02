@@ -1,0 +1,12 @@
+[package]
+name = "fasta-filter"
+version = "0.1.0"
+edition = "2021"
+authors = ["Noah Daniels <noah_daniels@uri.edu>"]
+description = "Filter a FASTA file and output a subset of the records on STDOUT"
+license = "MIT"
+readme = "README.md"
+
+[dependencies]
+bio = "2"
+clap = { version = "4.4.6", features = ["derive"] }
