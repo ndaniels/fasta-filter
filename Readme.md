@@ -1,6 +1,12 @@
 # fasta-filter
 Filter a FASTA file and output a subset of the records on STDOUT
 
+## Installation
+
+If you have Rust (and thus Cargo) installed, simply run `cargo install fasta-filter`.
+
+You can also clone this repository, `cd` into the directory, and run `cargo install --path .`
+
 ## Usage
 
 ```
