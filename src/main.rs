@@ -5,7 +5,6 @@ use std::io;
 
 #[derive(Parser, Debug)]
 #[clap(author, version, about, long_about = None)]
-
 struct Args {
     #[clap(short = 'p', long = "pattern")]
     pattern: Option<String>,
@@ -15,6 +14,8 @@ struct Args {
     min: Option<usize>,
     #[clap(short = 'n', long = "max")]
     max: Option<usize>,
+    #[clap(short = 'c', long = "count")]
+    num_seqs: Option<usize>,
 
     // Filename (or stdin)
     file: Option<String>,
@@ -28,6 +29,7 @@ fn main() {
     };
     let reader = Reader::new(input);
 
+    let mut seq_count: usize = 0;
     for record in reader.records() {
         let record = record.unwrap();
         let l = record.seq().len();
@@ -51,6 +53,12 @@ fn main() {
             }
         }
         print!("{record}");
+        seq_count += 1;
+        if let Some(n) = args.num_seqs {
+            if n == seq_count {
+                break;
+            }
+        }
     }
     println!("{}", args.exclude);
 }

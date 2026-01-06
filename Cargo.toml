@@ -8,5 +8,5 @@ license = "MIT"
 readme = "README.md"
 
 [dependencies]
-bio = "2"
-clap = { version = "4.4.6", features = ["derive"] }
+bio = "3"
+clap = { version = "4", features = ["derive"] }
