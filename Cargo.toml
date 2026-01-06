@@ -3,7 +3,7 @@ name = "fasta-filter"
 version = "0.2.0"
 edition = "2021"
 authors = ["Noah Daniels <noah_daniels@uri.edu>"]
-description = "Filter a FASTA file and output a subset of the records on STDOUT"
+description = "Filter a (multi-sequence) FASTA file and output a subset of the records on STDOUT"
 license = "MIT"
 readme = "README.md"
 
